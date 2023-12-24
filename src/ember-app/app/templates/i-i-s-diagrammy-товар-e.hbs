@@ -1,0 +1,95 @@
+<h3 class="ui header">{{t "forms.i-i-s-diagrammy-товар-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.кодМатериала
+      class=(if (v-get validationModel "кодМатериала" "isInvalid") "error")
+      label=(t "forms.i-i-s-diagrammy-товар-e.кодМатериала-caption")
+      data-test-i-i-s-diagrammy-товар-e-кодМатериала=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "кодМатериала" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.материал
+      class=(if (v-get validationModel "материал" "isInvalid") "error")
+      label=(t "forms.i-i-s-diagrammy-товар-e.материал-caption")
+      data-test-i-i-s-diagrammy-товар-e-материал=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "материал" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.цена
+      class=(if (v-get validationModel "цена" "isInvalid") "error")
+      label=(t "forms.i-i-s-diagrammy-товар-e.цена-caption")
+      data-test-i-i-s-diagrammy-товар-e-цена=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "цена" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-diagrammy-товар-e-естьВНаличии="true">
+    <label>{{t "forms.i-i-s-diagrammy-товар-e.естьВНаличии-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-diagrammy-наличие")
+      value=model.естьВНаличии
+      class=(if (v-get validationModel "естьВНаличии" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "естьВНаличии" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.количество
+      class=(if (v-get validationModel "количество" "isInvalid") "error")
+      label=(t "forms.i-i-s-diagrammy-товар-e.количество-caption")
+      data-test-i-i-s-diagrammy-товар-e-количество=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "количество" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-diagrammy-товар-e.складскоеМесто-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.складскоеМесто
+      displayAttributeName="номерМеста"
+      autocomplete=true
+      relationName="складскоеМесто"
+      projection="СкладскоеМестоL"
+      title=(t "forms.i-i-s-diagrammy-товар-e.складскоеМесто-caption")
+      readonly=readonly
+      componentName="складскоеМестоLookup"
+      class=(if (v-get validationModel "складскоеМесто" "isInvalid") "error")
+      data-test-i-i-s-diagrammy-товар-e-складскоеМесто=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "складскоеМесто" "message")}}
+  </div>
+</form>

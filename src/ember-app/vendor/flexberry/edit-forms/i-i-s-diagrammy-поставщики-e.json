@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Поставщики",
+  "name": "IISDiagrammyПоставщикиE",
+  "className": "ПоставщикиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-diagrammy-поставщики",
+      "modelProjection": "ПоставщикиE"
+    }
+  ]
+}

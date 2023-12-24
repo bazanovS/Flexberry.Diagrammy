@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-diagrammy-заказ-e",
+  "editForm": "i-i-s-diagrammy-заказ-e",
+  "external": false,
+  "caption": "Заказ",
+  "name": "IISDiagrammyЗаказL",
+  "className": "ЗаказL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-diagrammy-заказ",
+      "modelProjection": "ЗаказL"
+    }
+  ]
+}

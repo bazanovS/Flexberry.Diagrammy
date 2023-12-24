@@ -1,0 +1,108 @@
+<h3 class="ui header">{{t "forms.i-i-s-diagrammy-акт-приемки-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерАкта
+      class=(if (v-get validationModel "номерАкта" "isInvalid") "error")
+      label=(t "forms.i-i-s-diagrammy-акт-приемки-e.номерАкта-caption")
+      data-test-i-i-s-diagrammy-акт-приемки-e-номерАкта=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерАкта" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-diagrammy-акт-приемки-e.датаПриемки-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаПриемки
+      class=(if (v-get validationModel "датаПриемки" "isInvalid") "error")
+      data-test-i-i-s-diagrammy-акт-приемки-e-датаПриемки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаПриемки" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-diagrammy-акт-приемки-e.сотрудники-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.сотрудники
+      displayAttributeName="фИОСотрудника"
+      autocomplete=true
+      relationName="сотрудники"
+      projection="СотрудникиL"
+      title=(t "forms.i-i-s-diagrammy-акт-приемки-e.сотрудники-caption")
+      readonly=readonly
+      componentName="сотрудникиLookup"
+      class=(if (v-get validationModel "сотрудники" "isInvalid") "error")
+      data-test-i-i-s-diagrammy-акт-приемки-e-сотрудники=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "сотрудники" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.сотрудники.должность
+      class=(if (v-get validationModel.сотрудники "должность" "isInvalid") "error")
+      label=(t "forms.i-i-s-diagrammy-акт-приемки-e.сотрудники.должность-caption")
+      data-test-i-i-s-diagrammy-акт-приемки-e-сотрудники-должность=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.сотрудники "должность" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-diagrammy-акт-приемки-e.поставщики-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.поставщики
+      displayAttributeName="наименование"
+      autocomplete=true
+      relationName="поставщики"
+      projection="ПоставщикиL"
+      title=(t "forms.i-i-s-diagrammy-акт-приемки-e.поставщики-caption")
+      readonly=readonly
+      componentName="поставщикиLookup"
+      class=(if (v-get validationModel "поставщики" "isInvalid") "error")
+      data-test-i-i-s-diagrammy-акт-приемки-e-поставщики=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "поставщики" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-diagrammy-акт-приемки-e.тЧАктаПриемки-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="тЧАктаПриемкиGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.тЧАктаПриемки
+      content=model.тЧАктаПриемки
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "тЧАктаПриемки" "isInvalid") "error")
+      data-test-i-i-s-diagrammy-акт-приемки-e-тЧАктаПриемки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "тЧАктаПриемки" "message")}}
+  </div>
+</form>

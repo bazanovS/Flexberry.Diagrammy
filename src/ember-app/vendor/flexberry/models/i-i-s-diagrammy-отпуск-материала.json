@@ -1,0 +1,204 @@
+﻿{
+  "name": "IISDiagrammyОтпускМатериала",
+  "modelName": "i-i-s-diagrammy-отпуск-материала",
+  "className": "ОтпускМатериала",
+  "nameSpace": "IIS.Diagrammy",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаПроводки",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказ",
+      "relatedTo": "i-i-s-diagrammy-заказ",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "складскоеМесто",
+      "relatedTo": "i-i-s-diagrammy-складское-место",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудники",
+      "relatedTo": "i-i-s-diagrammy-сотрудники",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ОтпускМатериалаE",
+      "modelName": "i-i-s-diagrammy-отпуск-материала",
+      "attrs": [
+        {
+          "name": "датаПроводки",
+          "caption": "Дата проводки",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "НомерМеста",
+          "lookupValueField": "номерМеста",
+          "relationName": "СкладскоеМесто",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерМеста",
+              "caption": "Номер места",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Складское место",
+          "name": "складскоеМесто",
+          "relatedTo": "i-i-s-diagrammy-складское-место",
+          "inverse": null
+        },
+        {
+          "lookupValue": "ФИОСотрудника",
+          "lookupValueField": "фИОСотрудника",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИОСотрудника",
+              "caption": "Ф и о сотрудника",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Сотрудники",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-diagrammy-сотрудники",
+          "inverse": null
+        },
+        {
+          "lookupValue": "ФИОЗаказчика",
+          "lookupValueField": "фИОЗаказчика",
+          "relationName": "Заказ",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИОЗаказчика",
+              "caption": "Ф и о заказчика",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Заказ",
+          "name": "заказ",
+          "relatedTo": "i-i-s-diagrammy-заказ",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ОтпускМатериалаL",
+      "modelName": "i-i-s-diagrammy-отпуск-материала",
+      "attrs": [
+        {
+          "name": "датаПроводки",
+          "caption": "Дата проводки",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "СкладскоеМесто",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерМеста",
+              "caption": "Номер места",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер места",
+          "name": "складскоеМесто",
+          "relatedTo": "i-i-s-diagrammy-складское-место",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИОСотрудника",
+              "caption": "Ф и о сотрудника",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Ф и о сотрудника",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-diagrammy-сотрудники",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Заказ",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИОЗаказчика",
+              "caption": "Ф и о заказчика",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Ф и о заказчика",
+          "name": "заказ",
+          "relatedTo": "i-i-s-diagrammy-заказ",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

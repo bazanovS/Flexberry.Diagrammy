@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Складское место",
+  "name": "IISDiagrammyСкладскоеМестоE",
+  "className": "СкладскоеМестоE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-diagrammy-складское-место",
+      "modelProjection": "СкладскоеМестоE"
+    }
+  ]
+}

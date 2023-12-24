@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-diagrammy-складское-место-e",
+  "editForm": "i-i-s-diagrammy-складское-место-e",
+  "external": false,
+  "caption": "Складское место",
+  "name": "IISDiagrammyСкладскоеМестоL",
+  "className": "СкладскоеМестоL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-diagrammy-складское-место",
+      "modelProjection": "СкладскоеМестоL"
+    }
+  ]
+}

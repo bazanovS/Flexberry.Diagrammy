@@ -1,0 +1,80 @@
+﻿{
+  "applicationCaption": "Diagrammy",
+  "applicationTitle": "Diagrammy",
+  "items": [
+    {
+      "link": null,
+      "menuName": "приемка-товара",
+      "caption": "Приемка товара",
+      "title": "Приемка товара",
+      "children": [
+        {
+          "link": "i-i-s-diagrammy-акт-приемки-l",
+          "menuName": null,
+          "caption": "Акт приемки",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "заказ",
+      "caption": "Заказ",
+      "title": "Заказ",
+      "children": [
+        {
+          "link": "i-i-s-diagrammy-заказ-l",
+          "menuName": null,
+          "caption": "Заказ",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-diagrammy-отпуск-материала-l",
+          "menuName": null,
+          "caption": "Отпуск материала",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочники",
+      "caption": "Справочники",
+      "title": "Справочники",
+      "children": [
+        {
+          "link": "i-i-s-diagrammy-складское-место-l",
+          "menuName": null,
+          "caption": "Складское место",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-diagrammy-поставщики-l",
+          "menuName": null,
+          "caption": "Поставщики",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-diagrammy-сотрудники-l",
+          "menuName": null,
+          "caption": "Сотрудники",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-diagrammy-товар-l",
+          "menuName": null,
+          "caption": "Товар",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

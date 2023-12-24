@@ -1,0 +1,96 @@
+﻿{
+  "name": "IISDiagrammyПоставщики",
+  "modelName": "i-i-s-diagrammy-поставщики",
+  "className": "Поставщики",
+  "nameSpace": "IIS.Diagrammy",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "кодПоставщика",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерТС",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПоставщикиE",
+      "modelName": "i-i-s-diagrammy-поставщики",
+      "attrs": [
+        {
+          "name": "кодПоставщика",
+          "caption": "Код поставщика",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "номерТС",
+          "caption": "Номер ТС",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ПоставщикиL",
+      "modelName": "i-i-s-diagrammy-поставщики",
+      "attrs": [
+        {
+          "name": "кодПоставщика",
+          "caption": "Код поставщика",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "номерТС",
+          "caption": "Номер ТС",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

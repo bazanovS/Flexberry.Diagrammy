@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-diagrammy-отпуск-материала-e",
+  "editForm": "i-i-s-diagrammy-отпуск-материала-e",
+  "external": false,
+  "caption": "Отпуск материала",
+  "name": "IISDiagrammyОтпускМатериалаL",
+  "className": "ОтпускМатериалаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-diagrammy-отпуск-материала",
+      "modelProjection": "ОтпускМатериалаL"
+    }
+  ]
+}

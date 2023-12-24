@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Diagrammy",
+  "className": "Доставка",
+  "enumObjects": {
+    "Самовывоз": "Самовывоз",
+    "Курьер": "Курьер"
+  }
+}

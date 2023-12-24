@@ -1,0 +1,196 @@
+﻿{
+  "name": "IISDiagrammyАктПриемки",
+  "modelName": "i-i-s-diagrammy-акт-приемки",
+  "className": "АктПриемки",
+  "nameSpace": "IIS.Diagrammy",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаПриемки",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерАкта",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "поставщики",
+      "relatedTo": "i-i-s-diagrammy-поставщики",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудники",
+      "relatedTo": "i-i-s-diagrammy-сотрудники",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "тЧАктаПриемки",
+      "relatedTo": "i-i-s-diagrammy-т-ч-акта-приемки",
+      "inverse": "актПриемки"
+    }
+  ],
+  "projections": [
+    {
+      "name": "АктПриемкиE",
+      "modelName": "i-i-s-diagrammy-акт-приемки",
+      "attrs": [
+        {
+          "name": "номерАкта",
+          "caption": "Номер акта",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаПриемки",
+          "caption": "Дата приемки",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИОСотрудника",
+          "lookupValueField": "фИОСотрудника",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИОСотрудника",
+              "caption": "Принял",
+              "hidden": true,
+              "index": 3
+            },
+            {
+              "name": "должность",
+              "caption": "Должность",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Сотрудники",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-diagrammy-сотрудники",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Поставщики",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Поставщики",
+          "name": "поставщики",
+          "relatedTo": "i-i-s-diagrammy-поставщики",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ТЧАктаПриемкиE",
+          "caption": "Т ч акта приемки",
+          "name": "тЧАктаПриемки",
+          "relatedTo": "i-i-s-diagrammy-т-ч-акта-приемки",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "АктПриемкиL",
+      "modelName": "i-i-s-diagrammy-акт-приемки",
+      "attrs": [
+        {
+          "name": "номерАкта",
+          "caption": "Номер акта",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаПриемки",
+          "caption": "Дата приемки",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИОСотрудника",
+              "caption": "Принял",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Принял",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-diagrammy-сотрудники",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Поставщики",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Наименование",
+          "name": "поставщики",
+          "relatedTo": "i-i-s-diagrammy-поставщики",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

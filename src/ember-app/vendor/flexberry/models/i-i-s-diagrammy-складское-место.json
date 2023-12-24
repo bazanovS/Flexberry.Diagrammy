@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISDiagrammyСкладскоеМесто",
+  "modelName": "i-i-s-diagrammy-складское-место",
+  "className": "СкладскоеМесто",
+  "nameSpace": "IIS.Diagrammy",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номерМеста",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СкладскоеМестоE",
+      "modelName": "i-i-s-diagrammy-складское-место",
+      "attrs": [
+        {
+          "name": "номерМеста",
+          "caption": "Номер места",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "СкладскоеМестоL",
+      "modelName": "i-i-s-diagrammy-складское-место",
+      "attrs": [
+        {
+          "name": "номерМеста",
+          "caption": "Номер места",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

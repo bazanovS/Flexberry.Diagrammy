@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-diagrammy-поставщики-e",
+  "editForm": "i-i-s-diagrammy-поставщики-e",
+  "external": false,
+  "caption": "Поставщики",
+  "name": "IISDiagrammyПоставщикиL",
+  "className": "ПоставщикиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-diagrammy-поставщики",
+      "modelProjection": "ПоставщикиL"
+    }
+  ]
+}

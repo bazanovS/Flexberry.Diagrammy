@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-diagrammy-сотрудники-e",
+  "editForm": "i-i-s-diagrammy-сотрудники-e",
+  "external": false,
+  "caption": "Сотрудники",
+  "name": "IISDiagrammyСотрудникиL",
+  "className": "СотрудникиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-diagrammy-сотрудники",
+      "modelProjection": "СотрудникиL"
+    }
+  ]
+}

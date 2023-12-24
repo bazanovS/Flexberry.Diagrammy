@@ -1,0 +1,190 @@
+﻿{
+  "name": "IISDiagrammyТовар",
+  "modelName": "i-i-s-diagrammy-товар",
+  "className": "Товар",
+  "nameSpace": "IIS.Diagrammy",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "естьВНаличии",
+      "type": "i-i-s-diagrammy-наличие",
+      "flexberryType": "Наличие",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодМатериала",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "количество",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "материал",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "цена",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "складскоеМесто",
+      "relatedTo": "i-i-s-diagrammy-складское-место",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТоварE",
+      "modelName": "i-i-s-diagrammy-товар",
+      "attrs": [
+        {
+          "name": "кодМатериала",
+          "caption": "Код материала",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "материал",
+          "caption": "Материал",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "естьВНаличии",
+          "caption": "Есть в наличии",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "НомерМеста",
+          "lookupValueField": "номерМеста",
+          "relationName": "СкладскоеМесто",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерМеста",
+              "caption": "Номер места",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Складское место",
+          "name": "складскоеМесто",
+          "relatedTo": "i-i-s-diagrammy-складское-место",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ТоварL",
+      "modelName": "i-i-s-diagrammy-товар",
+      "attrs": [
+        {
+          "name": "кодМатериала",
+          "caption": "Код материала",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "материал",
+          "caption": "Материал",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "естьВНаличии",
+          "caption": "Есть в наличии",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "СкладскоеМесто",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерМеста",
+              "caption": "Номер места",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер места",
+          "name": "складскоеМесто",
+          "relatedTo": "i-i-s-diagrammy-складское-место",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Diagrammy",
+  "className": "Наличие",
+  "enumObjects": {
+    "Да": "Да",
+    "Нет": "Нет"
+  }
+}

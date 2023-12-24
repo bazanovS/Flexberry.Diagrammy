@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-diagrammy-акт-приемки-e",
+  "editForm": "i-i-s-diagrammy-акт-приемки-e",
+  "external": false,
+  "caption": "Акт приемки",
+  "name": "IISDiagrammyАктПриемкиL",
+  "className": "АктПриемкиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-diagrammy-акт-приемки",
+      "modelProjection": "АктПриемкиL"
+    }
+  ]
+}
